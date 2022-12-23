@@ -1,6 +1,4 @@
-const ImageClipPath = ({ cardImage, imageHeight, isHero }) => {
-  const imageHeightString = toString(imageHeight);
-  console.log(imageHeightString);
+const ImageClipPath = ({ cardImage, isHero }) => {
   return (
     <div
       className={`image-main relative ${
