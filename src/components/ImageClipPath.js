@@ -1,4 +1,4 @@
-const ImageClipPath = ({ cardImage, isHero }) => {
+const ImageClipPath = ({ cardImage, isHero, cardTitle }) => {
   return (
     <div
       className={`image-main relative ${
@@ -16,7 +16,7 @@ const ImageClipPath = ({ cardImage, isHero }) => {
       <div className="image-heading absolute">
         <h3 className="font-light uppercase text-right text-white ">
           <span className="bg-gradient-to-br from-[#7dd56fd9] to-[#28b487d9]">
-            The Sea Explorer
+            {cardTitle}
           </span>
         </h3>
       </div>

@@ -19,3 +19,15 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 }
+.hero-image .image-heading h3 span{
+    padding: 10px 15px;
+
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+.hero-image .image-heading {
+    font-size: 50px;
+    text-align: right;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
