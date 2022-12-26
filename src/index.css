@@ -1,5 +1,8 @@
 @tailwind base;
 @tailwind components;
+.secondary-heading-text {
+    @apply text-[22.5px] uppercase font-bold bg-clip-text text-transparent tracking-[1px] leading-[30px] inline-block bg-gradient-to-r from-[#7dd56f] to-[#28b487]
+}
 @tailwind utilities;
 
 .image-wrapper {
@@ -13,13 +16,13 @@
     width: 70%;
     z-index: 10;
 }
-.card-image .image-heading h3 span{
+.image-heading h3 span{
     padding: 10px 15px;
     line-height: 1;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 }
-.hero-image .image-heading h3 span{
+.image-heading h3 span{
     padding: 10px 15px;
 
     -webkit-box-decoration-break: clone;
@@ -30,4 +33,12 @@
     text-align: right;
     z-index: 10;
     transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.hero-image .image-heading h3 {
+    font-size: 50px;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
 }
