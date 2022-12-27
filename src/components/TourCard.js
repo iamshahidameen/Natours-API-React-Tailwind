@@ -40,10 +40,7 @@ const TourCard = ({ data }) => {
         </div>
         <div className="card-footer-right">
           <div className="btn-wrapper">
-            <a
-              href={data.tour_link}
-              className="btn-primary bg-[#55c57a] text-white inline-block rounded-3xl uppercase cursor-pointer text-[14px] py-3 px-[30px] hover:shadow-[0_10px_20px_5px_rgba(0,0,0,0.15)] hover:-translate-y-1 hover:animate-spin"
-            >
+            <a href={data.tour_link} className="btn-primary">
               Details
             </a>
           </div>

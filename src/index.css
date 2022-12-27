@@ -3,7 +3,9 @@
 .secondary-heading-text {
     @apply text-[22.5px] uppercase font-bold bg-clip-text text-transparent tracking-[1px] leading-[30px] inline-block bg-gradient-to-r from-[#7dd56f] to-[#28b487]
 }
+.btn-primary { @apply bg-[#55c57a] text-white inline-block rounded-3xl uppercase cursor-pointer text-[14px] py-3 px-[30px] hover:shadow-[0_10px_20px_5px_rgba(0,0,0,0.15)] hover:-translate-y-1 hover:animate-spin}
 @tailwind utilities;
+    
 
 .image-wrapper {
     clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%)
@@ -24,7 +26,6 @@
 }
 .image-heading h3 span{
     padding: 10px 15px;
-
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 }
@@ -41,4 +42,25 @@
     width: 70%;
     text-align: center;
     margin: 0 auto;
+}
+.hero-image .heading-box-group {
+    display: flex;
+}
+.tour-featured-images {
+    display: flex;
+    clip-path: polygon( 0 9vw, 100% 0, 100% calc(100% - 9vw), 0 100% );
+    -webkit-clip-path: polygon( 0 9vw, 100% 0, 100% calc(100% - 9vw), 0 100% );
+    margin-top: calc(0px - 9vw);
+    position: relative;
+    z-index: 1000;
+}
+.tour-reviews {
+    margin-top: calc(0px - 9vw);
+    padding: calc(50px + 9vw) 0;
+    position: relative;
+    z-index: 1000;
+    background: -webkit-gradient( linear, left top, right bottom, from(#7dd56f), to(#28b487) );
+    background: linear-gradient(to right bottom, #7dd56f, #28b487);
+    clip-path: polygon( 0 9vw, 100% 0, 100% calc(100% - 9vw), 0 100% );
+    -webkit-clip-path: polygon( 0 9vw, 100% 0, 100% calc(100% - 9vw), 0 100% );
 }

@@ -1,6 +1,6 @@
 import ImageClipPath from './ImageClipPath';
 
-const TourSingle = () => {
+const HeroArea = () => {
   return (
     <ImageClipPath
       cardImage={'https://natours.netlify.app/img/hero-small.jpg'}
@@ -10,4 +10,4 @@ const TourSingle = () => {
   );
 };
 
-export default TourSingle;
+export default HeroArea;

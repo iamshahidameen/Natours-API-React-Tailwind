@@ -14,11 +14,21 @@ const ImageClipPath = ({ cardImage, isHero, cardTitle }) => {
         />
       </div>
       <div className="image-heading absolute">
-        <h3 className="font-light uppercase text-right text-white ">
+        <h3 className="font-light uppercase text-right text-white font-bold">
           <span className="bg-gradient-to-br from-[#7dd56fd9] to-[#28b487d9]">
             {cardTitle}
           </span>
         </h3>
+        <div className="heading-box-group hidden uppercase text-[15px] text-[#f7f7f7]  justify-center mt-[30px]">
+          <div className="heading-box mr-10">
+            <div className="heading-icon"></div>
+            <div className="heading-box-text">7 DAYS</div>
+          </div>
+          <div className="heading-box mr-10">
+            <div className="heading-icon"></div>
+            <div className="heading-box-text">MIAMI, USA</div>
+          </div>
+        </div>
       </div>
     </div>
   );
