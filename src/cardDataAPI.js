@@ -64,8 +64,8 @@ const data = [
     tour_link: './',
   },
   {
-    tour_id: '2',
-    tour_title: 'The Snow Adventurer',
+    tour_id: '3',
+    tour_title: 'New Snow Adventurer',
     tour_image: '',
     tour_details: {
       tour_sub_heading: 'difficult 4-day tour',
@@ -96,8 +96,8 @@ const data = [
     tour_link: './',
   },
   {
-    tour_id: '2',
-    tour_title: 'The Snow Adventurer',
+    tour_id: '4',
+    tour_title: 'The Dry Adventurer',
     tour_image: '',
     tour_details: {
       tour_sub_heading: 'difficult 4-day tour',
@@ -119,7 +119,9 @@ const data = [
       },
       {
         tour_icon: '',
-        tour_feature: '10 people',
+        tour_feature: `
+
+        10 peeps `,
       },
     ],
     tour_price: 997,

@@ -42,7 +42,10 @@ const TourCard = ({ data }) => {
         </div>
         <div className="card-footer-right">
           <div className="btn-wrapper">
-            <Link to="/single-tour" className="btn-primary">
+            <Link
+              to={`all-tours/${data.tour_title.split(' ').join('-')}`}
+              className="btn-primary"
+            >
               Details
             </Link>
           </div>
