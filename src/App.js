@@ -1,15 +1,17 @@
-import { Navbar, Footer, TourCard } from './components';
-import { AllTours, SingleTour } from './pages';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AllTours, SingleTour, Error } from './pages';
 
 const App = () => {
   return (
-    <div className="App">
-      <main className="p-[30px]">
-        <Navbar />
-        <AllTours />
-        <Footer />
-      </main>
-    </div>
+    <main className="p-[30px]">
+      <BrowserRouter>
+        <Routes>
+          <Route path="all-tours" element={<AllTours />}></Route>
+          <Route path="all-tours/:id" element={<SingleTour />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </BrowserRouter>
+    </main>
   );
 };
 

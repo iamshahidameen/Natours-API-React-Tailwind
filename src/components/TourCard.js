@@ -1,10 +1,12 @@
 import ImageClipPath from './ImageClipPath';
 import CardDataWithIcons from './CardDataWithIcons';
 import cardImage from '../assests/images/main-bg.jpg';
+import { Link } from 'react-router-dom';
+
 const TourCard = ({ data }) => {
   console.log(data);
   return (
-    <section className="card-main w-[340px] rounded-[3px] shadow-[0_15px_40px_0px_rgba(0,0,0,0.1)]">
+    <section className="card-main sm:w-[280px]  md:w-[340px] rounded-[3px] shadow-[0_15px_40px_0px_rgba(0,0,0,0.1)]">
       <ImageClipPath
         cardImage={cardImage}
         isHero={false}
@@ -40,9 +42,9 @@ const TourCard = ({ data }) => {
         </div>
         <div className="card-footer-right">
           <div className="btn-wrapper">
-            <a href={data.tour_link} className="btn-primary">
+            <Link to="/single-tour" className="btn-primary">
               Details
-            </a>
+            </Link>
           </div>
         </div>
       </div>

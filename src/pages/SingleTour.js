@@ -8,7 +8,7 @@ import {
 
 const SingleTour = () => {
   return (
-    <main>
+    <main className="page-wrapper">
       <HeroArea />
       <SingleTourDetails />
       <SingleTourFeaturedImages />
