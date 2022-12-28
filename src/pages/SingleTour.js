@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import cardDataAPI from '../cardDataAPI';
-import { getData } from '../utils/index';
+import { getTour } from '../utils/index';
 
 import {
   HeroArea,
@@ -12,38 +12,30 @@ import {
 } from '../components';
 
 const SingleTour = () => {
+  const [tour, setTour] = useState({});
+  const { tourId } = useParams();
+
+  console.log(tourId);
+
+  const getTourData = async () => {
+    const {
+      data: { data },
+    } = await getTour(`/tours/5c88fa8cf4afda39709c2955`);
+
+    console.log(data);
+
+    setTour(data);
+  };
+
   useEffect(() => {
-    console.log(getData(`tours/5c88fa8cf4afda39709c2955`));
+    getTourData();
   }, []);
 
-  const { tourName } = useParams();
-  const [tour, setTour] = useState({});
-
-  //   console.log(tourName);
-
-  //   useEffect(() => {
-  //     setTour(
-  //       cardDataAPI.filter((currentTour) => {
-  //         // console.log(currentTour.tour_title.split('-').join(' '));
-  //         return currentTour.tour_title === tourName.split('-').join(' ');
-  //       })
-  //     );
-  //   }, []);
-
-  const {
-    tour_id,
-    tour_title,
-    tour_image,
-    tour_details,
-    tour_features,
-    tour_price,
-    tour_rating,
-    tour_total_reviews,
-    tour_link,
-  } = tour;
+  const { name } = tour;
   return (
     <>
-      <HeroArea heroTitle={tour_title} />
+      <HeroArea heroTitle={name} />
+      {tour.name} - hello
       <SingleTourDetails />
       <SingleTourFeaturedImages />
       <TourReviews />
