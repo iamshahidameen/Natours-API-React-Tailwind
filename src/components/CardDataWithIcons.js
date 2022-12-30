@@ -1,6 +1,5 @@
 import LocationIcon from './LocationIcon';
 const CardDataWithIcons = ({ feature }) => {
-  console.log(feature);
   return (
     <div className="card-data">
       <LocationIcon />
