@@ -8,7 +8,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<SharedUserLayout />}>
             <Route index element={<AllTours />} />
-            <Route path="all-tours/:toudId" element={<SingleTour />} />
+            <Route path="all-tours/:toudName" element={<SingleTour />} />
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>
