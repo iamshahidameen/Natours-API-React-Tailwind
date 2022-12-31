@@ -1,4 +1,4 @@
-const ImageClipPath = ({ cardImage, isHero, cardTitle }) => {
+const ImageClipPath = ({ cardImage, isHero, cardTitle, days, location }) => {
   return (
     <div
       className={`image-main relative ${
@@ -22,11 +22,11 @@ const ImageClipPath = ({ cardImage, isHero, cardTitle }) => {
         <div className="heading-box-group hidden uppercase text-[15px] text-[#f7f7f7]  justify-center mt-[30px]">
           <div className="heading-box mr-10">
             <div className="heading-icon"></div>
-            <div className="heading-box-text">7 DAYS</div>
+            <div className="heading-box-text">{days} DAYS</div>
           </div>
           <div className="heading-box mr-10">
             <div className="heading-icon"></div>
-            <div className="heading-box-text">MIAMI, USA</div>
+            <div className="heading-box-text">{location}</div>
           </div>
         </div>
       </div>

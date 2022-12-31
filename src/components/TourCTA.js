@@ -1,4 +1,5 @@
-const TourCTA = () => {
+const TourCTA = ({ days }) => {
+  console.log(days, 'dddd');
   return (
     <section className="tour-cta -mt-[9vw] p-7 pb-24 bg-[#f7f7f7] pt-[14vw]">
       <div className="cta max-w-5xl my-0 mx-auto rounded-md bg-white py-[90px] pr-[50px] pl-[210px] shadow-[0_30px_80px_0px_rgba(0,0,0,0.15)] relative overflow-hidden">
@@ -34,7 +35,8 @@ const TourCTA = () => {
             </div>
             <div className="cta-details">
               <p className="text-[19px] text-[#777]">
-                7 days. 1 adventure. Infinite memories. Make it yours today!
+                {days.duration} days. 1 adventure. Infinite memories. Make it
+                yours today!
               </p>
             </div>
           </div>

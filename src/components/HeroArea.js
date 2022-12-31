@@ -1,11 +1,13 @@
 import ImageClipPath from './ImageClipPath';
 
-const HeroArea = () => {
+const HeroArea = ({ image, hero, name, days, location }) => {
   return (
     <ImageClipPath
-      cardImage={'https://natours.netlify.app/img/hero-small.jpg'}
-      isHero={true}
-      cardTitle={'The Sea Explorer tour'}
+      cardImage={image}
+      isHero={hero}
+      cardTitle={name}
+      days={days}
+      location={location}
     />
   );
 };

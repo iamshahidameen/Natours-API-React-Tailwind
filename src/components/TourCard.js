@@ -82,9 +82,9 @@ const TourCard = ({ tourData }) => {
         </div>
         <div className="card-footer-right">
           <div className="btn-wrapper">
-            {/* <Link to={`all-tours/${slug}`} className="btn-primary">
+            <Link to={`/${id}`} className="btn-primary">
               Details
-            </Link> */}
+            </Link>
 
             {/* <Link
               to={{
@@ -95,7 +95,7 @@ const TourCard = ({ tourData }) => {
             >
               Details
             </Link> */}
-            <Link
+            {/* <Link
               to={{
                 pathname: `all-tours/${slug}`,
                 search: `tourID=${id}`,
@@ -103,7 +103,7 @@ const TourCard = ({ tourData }) => {
               className="btn-primary"
             >
               Details
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
