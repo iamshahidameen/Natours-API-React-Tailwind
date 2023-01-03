@@ -24,11 +24,10 @@ const AllTours = () => {
   }
 
   return (
-    <div className="tour-page grid sm:grid-cols-1 lg:grid-cols-3 px-14 pt-20 gap-y-16 justify-items-center">
+    <div className="tour-page grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-14 pt-20 gap-y-16 justify-items-center">
       {tours.map((tour) => {
         return <TourCard key={tour.id} tourData={tour} />;
       })}
-      hello
     </div>
   );
 };

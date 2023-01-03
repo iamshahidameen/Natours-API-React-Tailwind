@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AllTours, SingleTour, Error, SharedUserLayout } from './pages';
+import { AllTours, SingleTour, Error, Login, SharedUserLayout } from './pages';
 
 const App = () => {
   return (
@@ -7,8 +7,9 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<SharedUserLayout />}>
-            <Route index element={<AllTours />} />
-            <Route path="/:tourID" element={<SingleTour />} />
+            <Route index element={<Login />} />
+            {/* <Route index element={<AllTours />} />
+            <Route path="/:tourID" element={<SingleTour />} /> */}
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>
