@@ -6,6 +6,11 @@ import {
   Login,
   SharedTourLayout,
   Register,
+  SharedUserLayout,
+  Settings,
+  MyBookings,
+  MyReviews,
+  Billing,
 } from './pages';
 
 const App = () => {
@@ -17,6 +22,12 @@ const App = () => {
             <Route index element={<AllTours />} />
             <Route path="/:tourID" element={<SingleTour />} />
             <Route path="login" element={<Register />} />
+            <Route path="me" element={<SharedUserLayout />}>
+              <Route index element={<Settings />} />
+              <Route path="bookings" element={<MyBookings />} />
+              <Route path="reviews" element={<MyReviews />} />
+              <Route path="billing" element={<Billing />} />
+            </Route>
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>
