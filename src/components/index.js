@@ -8,6 +8,7 @@ import SingleTourFeaturedImages from './SingleTourFeaturedImages';
 import TourReviews from './TourReviews';
 import TourCTA from './TourCTA';
 import TourGuides from './TourGuides';
+import FormRow from './FormRow';
 
 export {
   Navbar,
@@ -20,4 +21,5 @@ export {
   TourReviews,
   TourCTA,
   TourGuides,
+  FormRow,
 };

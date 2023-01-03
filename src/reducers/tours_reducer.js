@@ -12,11 +12,9 @@ const tours_reducer = (state, action) => {
     return { ...state, get_tours_loading: true };
   }
   if (action.type === GET_TOURS_SUCCESS) {
-    console.log('GET_TOURS_SUCCESS');
     return { ...state, get_tours_loading: false, get_tours: action.payload };
   }
   if (action.type === GET_TOURS_ERROR) {
-    console.log('GET_TOURS_ERROR');
     return { ...state, get_tours_error: true };
   }
   if (action.type === GET_SINGLE_TOUR_BEGIN) {

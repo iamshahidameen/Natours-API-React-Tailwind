@@ -34,7 +34,8 @@ const TourCTA = ({ days }) => {
             </div>
             <div className="cta-details">
               <p className="text-[19px] text-[#777]">
-                days. 1 adventure. Infinite memories. Make it yours today!
+                {days} days. 1 adventure. Infinite memories. Make it yours
+                today!
               </p>
             </div>
           </div>

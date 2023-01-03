@@ -21,6 +21,7 @@ const SingleTour = () => {
   } = useToursContext();
 
   const { name, duration, imageCover, images, reviews } = tour;
+  console.log(reviews);
 
   useEffect(() => {
     getSingleTour(`${tours_url}/${tourID}`);

@@ -2,8 +2,6 @@ import QuickFacts from './QuickFacts';
 import TourGuides from './TourGuides';
 
 const SingleTourDetails = ({ details }) => {
-  console.log('details', details);
-
   const {
     description,
     guides,
@@ -13,16 +11,19 @@ const SingleTourDetails = ({ details }) => {
     ratingsQuantity,
     startDates,
   } = details;
+
   const tourFeatures = [
     {
       icon: 'icon-calendar',
       title: 'NEXT DATE',
-      value:
+      value: ` ${
+        startDates &&
         new Date(startDates[0]).toLocaleString('default', {
           month: 'long',
         }) +
-        ' ' +
-        new Date(startDates[0]).getFullYear(),
+          ' ' +
+          new Date(startDates[0]).getFullYear()
+      }`,
     },
     {
       icon: 'icon-trending-up',
@@ -40,7 +41,7 @@ const SingleTourDetails = ({ details }) => {
       value: ratingsAverage + ' / ' + ratingsQuantity,
     },
   ];
-  console.log(tourFeatures);
+
   return (
     <section className="single-tour-details -mt-[9vw] grid grid-cols-2 ">
       <div className="tour-features bg-[#f7f7f7] pt-[14vw] pb-[calc(1vw+9vw)] px-[8vw]">
@@ -48,17 +49,19 @@ const SingleTourDetails = ({ details }) => {
           <div className="secondary-heading">
             <h3 className="secondary-heading-text mb-5">Quick Facts</h3>
           </div>
-          {tourFeatures.map((feature, index) => {
-            return <QuickFacts key={index} features={feature} />;
-          })}
+          {tourFeatures &&
+            tourFeatures.map((feature, index) => {
+              return <QuickFacts key={index} features={feature} />;
+            })}
         </div>
         <div className="tour-guides">
           <div className="secondary-heading mt-[70px]">
             <h3 className="secondary-heading-text mb-9">Your Tour Guides</h3>
           </div>
-          {guides.map((guide) => {
-            return <TourGuides key={guide._id} guides={guide} />;
-          })}
+          {guides &&
+            guides.map((guide) => {
+              return <TourGuides key={guide._id} guides={guide} />;
+            })}
         </div>
       </div>
       <div className="tour-details pt-[14vw] pb-[calc(1vw+9vw)] px-[8vw]">

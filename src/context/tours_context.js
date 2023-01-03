@@ -42,7 +42,7 @@ export const ToursProvider = ({ children }) => {
 
     try {
       const response = await axios.get(url);
-      console.log(response.data.data.data);
+      console.log('single tour >', response.data.data.data);
       dispatch({
         type: GET_SINGLE_TOUR_SUCCESS,
         payload: response.data.data.data,
