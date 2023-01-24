@@ -1,4 +1,2 @@
-export const BASE_URL =
-  'https://natours-api-production-0623.up.railway.app/api/v1';
-export const tours_url =
-  'https://natours-api-production-0623.up.railway.app/api/v1/tours';
+export const BASE_URL = 'http://localhost:7000/api/v1';
+export const tours_url = 'http://localhost:7000/api/v1/tours';
