@@ -1,27 +1,34 @@
 import { useState } from 'react';
 import { FormRow } from '../components';
+import { LOGIN_URL } from '../utils/constants';
+import { useUsersContext } from '../context/users_context';
 
 const inittialState = {
   name: '',
   email: '',
   password: '',
-  isMemeber: true,
+  isMemeber: false,
 };
 
 const Register = () => {
-  const [values, setValues] = useState(inittialState);
+  // const { getLoginUser } = useUsersContext();
+  console.log(useUsersContext());
+  const [user, setUser] = useState(inittialState);
+  const [email, setEmail] = useState('');
+
   const handleChange = (e) => {
-    setValues({
-      ...values,
-      name: e.target.value,
-      email: e.target.value,
-      password: e.target.value,
-    });
-    console.log('Handle Change', e.target);
+    setUser({ ...user, [e.target.name]: e.target.value });
+    // console.log(e.target.value);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Handle Submit', e.target);
+    // setUser(...user);
+    console.log(user);
+    let creds = {
+      email: 'john@example.com',
+      password: 'test1234',
+    };
+    // getLoginUser(LOGIN_URL, creds);
   };
   return (
     <div className="form-wrapper max-w-[550px] mx-auto bg-white py-[50px] px-[70px] rounded-md my-[80px]">
@@ -33,15 +40,15 @@ const Register = () => {
         <FormRow
           type="email"
           name="email"
-          value={values.name}
-          handleChange={handleChange}
+          value={user.email}
+          changeProp={handleChange}
         />
         {/* Password */}
         <FormRow
           type="password"
           name="password"
-          value={values.name}
-          handleChange={handleChange}
+          value={user.password}
+          changeProp={handleChange}
         />
         <button type="submit" className="btn-primary mt-4">
           Submit
