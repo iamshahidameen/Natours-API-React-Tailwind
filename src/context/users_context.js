@@ -8,6 +8,7 @@ const initialState = {
   get_user_loading: false,
   get_user_success: false,
   get_user_error: false,
+  get_user_response: {},
 };
 
 const UsersContext = React.createContext();
@@ -45,6 +46,7 @@ export const UsersProvider = ({ children }) => {
             type: GET_USER_SUCCESS,
             payload: result,
           });
+
           console.log(result);
         });
     } catch (error) {
